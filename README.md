@@ -6,6 +6,10 @@ Kusuri is a macOS menu-bar app. At each dose time it shows a small card that flo
 
 > **Status:** Early development
 
+![Kusuri reminder card](docs/design/reminder-card.png)
+
+See [docs/design/design.md](docs/design/design.md) for all screens.
+
 ---
 
 ## Why it exists

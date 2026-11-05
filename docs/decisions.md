@@ -30,6 +30,8 @@ The key product and technical decisions behind Kusuri, logged by day.
 
 ## 2026-11-04
 
-**Chose Swift and SwiftUI for the app.** A native stack gives Kusuri reliable background timing, a small footprint, and full control over the always-on-top reminder window.
+**Chose Swift and SwiftUI for the app.** ...
 
-**Defined the core data model.** Medications, schedules, dose events and settings, with the reminder rules built into the model. See `docs/data-model.md`.
+**Defined the core data model.** ...
+
+**Designed the core screens.** Reminder card, batch update and compact full-screen view. The batch update opens automatically when the Mac wakes. See `docs/design/`.
