@@ -95,7 +95,7 @@ Not in v1: every N hours, and as-needed. As-needed is left out on purpose, becau
 
 Doses that weren't answered in time are collected into one batch update, where the user logs what happened.
 
-**Mac asleep or Kusuri not running.** When the user comes back (e.g. two hours late), Kusuri shows a late reminder for each dose that passed. If several are waiting, one notice says so and opens the batch update.
+**Mac asleep or screen locked.** When the Mac wakes or unlocks, Kusuri opens the batch update automatically if any doses passed without an answer. No need to open the app first. If Kusuri was quit, the batch update opens the next time it starts.
 
 **Batch update.** A list of unlogged and Missed doses, each with Taken earlier / Skipped / Missed. It only records a status. It never suggests taking a dose now, and it always shows the pharmacist line from the safety principles.
 
