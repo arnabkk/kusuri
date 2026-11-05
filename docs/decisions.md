@@ -25,3 +25,11 @@ The key product and technical decisions behind Kusuri, logged by day.
 **Chose direct distribution through GitHub Releases.** Early builds are shared as a free `.app` download for the first group of testers. Apple Developer ID signing will be added ahead of a public launch. Until then, users approve the app once in System Settings → Privacy & Security, and the README walks them through it.
 
 **Updated the repo to match.** Rewrote the README for macOS, updated the repo description and topics, and added a `.gitignore`.
+
+---
+
+## 2026-11-04
+
+**Chose Swift and SwiftUI for the app.** A native stack gives Kusuri reliable background timing, a small footprint, and full control over the always-on-top reminder window.
+
+**Defined the core data model.** Medications, schedules, dose events and settings, with the reminder rules built into the model. See `docs/data-model.md`.
