@@ -35,3 +35,9 @@ The key product and technical decisions behind Kusuri, logged by day.
 **Defined the core data model.** ...
 
 **Designed the core screens.** Reminder card, batch update and compact full-screen view. The batch update opens automatically when the Mac wakes. See `docs/design/`.
+
+---
+
+## 2026-11-09
+
+**Added the reminder escalation rules.** An unanswered card re-raises every 5 minutes for the first 30 minutes, then every 10 minutes, and the dose is logged as Missed at 60 minutes. Snoozing jumps to the next reminder time without moving that deadline. The rules live in `KusuriCore` with no UI code, so they can be tested on their own.
