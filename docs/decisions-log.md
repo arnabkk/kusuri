@@ -41,3 +41,9 @@ The key product and technical decisions behind Kusuri, logged by day.
 ## 2026-11-09
 
 **Added the reminder escalation rules.** An unanswered card re-raises every 5 minutes for the first 30 minutes, then every 10 minutes, and the dose is logged as Missed at 60 minutes. Snoozing jumps to the next reminder time without moving that deadline. The rules live in `KusuriCore` with no UI code, so they can be tested on their own.
+
+---
+
+## 2026-11-10
+
+**Documented the escalation rules.** Added `docs/escalation.md`, which explains the reminder timeline, how snoozing works and how missed doses are handled, so the behaviour is clear without reading the code.
