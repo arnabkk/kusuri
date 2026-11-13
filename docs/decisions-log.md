@@ -32,7 +32,7 @@ The key product and technical decisions behind Kusuri, logged by day.
 
 **Chose Swift and SwiftUI for the app.** Native code gives Kusuri what the reminder card depends on: a menu-bar app that launches at login, floating windows that stay above full-screen apps, and sleep/wake events for opening the batch update. SwiftUI keeps the interface code small and declarative.
 
-**Defined the core data model.** Four types cover v1: Medication (what to take and when), Schedule (wall-clock times and weekdays), DoseEvent (one dose at one time, and what happened to it) and Settings. Times are stored as wall-clock times in a named time zone, so a dose at 8:00 stays at 8:00 across daylight-saving changes. See docs/data-model.md.
+**Defined the core data model.** Four types cover v1: `Medication` (what to take and when), `Schedule` (wall-clock times and weekdays), `DoseEvent` (one dose at one time, and what happened to it) and `Settings`. Times are stored as wall-clock times in a named time zone, so a dose at 8:00 stays at 8:00 across daylight-saving changes. See `docs/data-model.md`.
 
 **Designed the core screens.** Reminder card, batch update and compact full-screen view. The batch update opens automatically when the Mac wakes. See `docs/design/`.
 
@@ -54,4 +54,4 @@ The key product and technical decisions behind Kusuri, logged by day.
 
 **Defined the core's boundaries.** Added `Ports.swift` to `KusuriCore`: protocols for the clock, storage (medications, dose events, settings) and the reminder screen. The core depends only on these protocols, and the app supplies the real versions, so business rules never touch SwiftUI or the file system and can be tested with fakes. Medications and dose events have separate repositories so each part of the app depends only on the data it uses.
 
----
+**Snooze follows the escalation timeline.** A snooze hides the card until the next reminder time rather than for a user-chosen length, so there is one snooze rule and it can never push past the 60-minute deadline. Removed the unused snoozeMinutes setting.
