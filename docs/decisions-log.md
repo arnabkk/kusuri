@@ -30,9 +30,9 @@ The key product and technical decisions behind Kusuri, logged by day.
 
 ## 2026-11-04
 
-**Chose Swift and SwiftUI for the app.** ...
+**Chose Swift and SwiftUI for the app.**
 
-**Defined the core data model.** ...
+**Defined the core data model.**
 
 **Designed the core screens.** Reminder card, batch update and compact full-screen view. The batch update opens automatically when the Mac wakes. See `docs/design/`.
 
@@ -47,3 +47,11 @@ The key product and technical decisions behind Kusuri, logged by day.
 ## 2026-11-10
 
 **Documented the escalation rules.** Added `docs/escalation.md`, which explains the reminder timeline, how snoozing works and how missed doses are handled, so the behaviour is clear without reading the code.
+
+---
+
+## 2026-11-13
+
+**Defined the core's boundaries.** Added `Ports.swift` to `KusuriCore`: protocols for the clock, storage (medications, dose events, settings) and the reminder screen. The core depends only on these protocols, and the app supplies the real versions, so business rules never touch SwiftUI or the file system and can be tested with fakes. Medications and dose events have separate repositories so each part of the app depends only on the data it uses.
+
+---
