@@ -164,22 +164,19 @@ public struct Settings: Codable, Equatable {
     public var soundVolume: Double
     public var quietHours: QuietHours?
     public var launchAtLogin: Bool
-    public var snoozeMinutes: Int
 
     public init(
         timeZoneID: String = TimeZone.current.identifier,
         soundEnabled: Bool = true,
         soundVolume: Double = 0.7,
         quietHours: QuietHours? = nil,
-        launchAtLogin: Bool = true,
-        snoozeMinutes: Int = 5
+        launchAtLogin: Bool = true
     ) {
         self.timeZoneID = timeZoneID
         self.soundEnabled = soundEnabled
         self.soundVolume = soundVolume
         self.quietHours = quietHours
         self.launchAtLogin = launchAtLogin
-        self.snoozeMinutes = snoozeMinutes
     }
 }
 

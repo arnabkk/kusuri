@@ -122,7 +122,6 @@ struct Settings: Codable {
     var soundVolume: Double        // 0.0–1.0, Kusuri's own volume
     var quietHours: QuietHours?    // do-not-disturb window
     var launchAtLogin: Bool        // on by default
-    var snoozeMinutes: Int         // open question: 5, 10 or 15
 }
 
 struct QuietHours: Codable {
